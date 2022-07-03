@@ -1,0 +1,19 @@
+kredensial.exe: 00001820: 19:41:01 []:>--------------------------------------------------------------<
+kredensial.exe: 00001820: 19:41:01 [TUniServerModule]:Server First Init.
+kredensial.exe: 00001820: 19:41:01 [TUniServerModule]:Start Path = D:\DEV\kredensial\kredensial\Win64\Debug\
+kredensial.exe: 00001820: 19:41:01 [TUniServerModule]:Debug Mode = ON
+kredensial.exe: 00001820: 19:41:01 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+kredensial.exe: 00001820: 19:41:01 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+kredensial.exe: 00001820: 19:41:02 [TUniServerModule]:HTTP Server Started on Port: 8077
+kredensial.exe: 00000E64: 20:10:06 [TUniGUIServerModule.Create]:EFDException : [FireDAC][Phys][MySQL]-314. Cannot load vendor library [D:\DEV\kredensial\kredensial\libmysql32.dll]. Library has unsupported architecture [x86]. Required [x64].
+%1 is not a valid Win32 application
+Hint: check it is in the PATH or application EXE directories, and has x64 bitness. : Addr: $00000000009D5D2B
+kredensial.exe: 00000E64: 20:10:06 [TUniServerModule]:Server Shutdown Completed.
+kredensial.exe: 00000E64: 20:10:06 []:<-------------------------------------------------------------->
+kredensial.exe: 00000E64: 20:10:06 [Terminated]:Exit Code: 1
+kredensial.exe: 00003988: 20:10:20 [TUniGUIServerModule.Create]:EFDException : [FireDAC][Phys][MySQL]-314. Cannot load vendor library [D:\DEV\kredensial\kredensial\libmysql32.dll]. Library has unsupported architecture [x86]. Required [x64].
+%1 is not a valid Win32 application
+Hint: check it is in the PATH or application EXE directories, and has x64 bitness. : Addr: $00000000009D5D2B
+kredensial.exe: 00003988: 20:10:20 [TUniServerModule]:Server Shutdown Completed.
+kredensial.exe: 00003988: 20:10:20 []:<-------------------------------------------------------------->
+kredensial.exe: 00003988: 20:10:20 [Terminated]:Exit Code: 1

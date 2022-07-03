@@ -1,0 +1,50 @@
+unit UnitRegister;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniEdit, uniFieldSet, uniGUIBaseClasses, uniPanel,
+  uniButton;
+
+type
+  TfrmRegisters = class(TUniForm)
+    edEmail: TUniEdit;
+    edPassword: TUniEdit;
+    edPassKonf: TUniEdit;
+    btnReg: TUniButton;
+    procedure btnRegClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmRegisters: TfrmRegisters;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function frmRegisters: TfrmRegisters;
+begin
+  Result := TfrmRegisters(UniMainModule.GetFormInstance(TfrmRegisters));
+end;
+
+procedure TfrmRegisters.btnRegClick(Sender: TObject);
+begin
+  if edEmail.Text = '' then
+  begin
+    MessageDlg('Masukan alamat email.', mtError, [mbOK]);
+    edEmail.SetFocus;
+    exit;
+  end;
+
+  MessageDlg('dfdfg', mtInformation, [mbOK]);
+end;
+
+end.

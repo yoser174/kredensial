@@ -1,0 +1,77 @@
+unit UnitLogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIRegClasses, uniGUIForm, uniGUIBaseClasses, uniEdit,
+  uniButton, uniWidgets, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, uniLabel, uniPanel;
+
+type
+  TfrmLogin = class(TUniLoginForm)
+    UniButton1: TUniButton;
+    btnLogin: TUniButton;
+    UniPanel1: TUniPanel;
+    edEmail: TUniEdit;
+    UniLabel1: TUniLabel;
+    edPassword: TUniEdit;
+    UniLabel2: TUniLabel;
+    qLogin: TFDQuery;
+    procedure UniButton1Click(Sender: TObject);
+    procedure btnLoginClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  uniGUIVars, MainModule, uniGUIApplication, UnitRegister;
+
+function frmLogin: TfrmLogin;
+begin
+  Result := TfrmLogin(UniMainModule.GetFormInstance(TfrmLogin));
+end;
+
+procedure TfrmLogin.btnLoginClick(Sender: TObject);
+begin
+  ShowMask('Loading');
+  UniSession.Synchronize();
+
+  if QLogin.Active then QLogin.Active := False;
+  QLogin.ParamByName('email').Value := edEmail.Text;
+  QLogin.ParamByName('password').Value := edPassword.Text;
+  QLogin.Open();
+
+  if qLogin.RecordCount > 0 then
+  begin
+    ModalResult := mrOK;
+    user_id := qLogin.FieldByName('id').AsString;
+    UniApplication.Cookies.SetCookie('UserId', user_id);
+  end
+  else
+  ShowMessage('Invalid email dan/atau password.', mtError,[mbOk]);
+
+  HideMask;
+end;
+
+procedure TfrmLogin.UniButton1Click(Sender: TObject);
+begin
+  frmRegisters.Showmodal;
+end;
+
+initialization
+
+RegisterAppFormClass(TfrmLogin);
+
+end.

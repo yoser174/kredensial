@@ -1,0 +1,15 @@
+kredensial.exe: 0000113C: 17:09:53 []:>--------------------------------------------------------------<
+kredensial.exe: 0000113C: 17:09:53 [TUniServerModule]:Server First Init.
+kredensial.exe: 0000113C: 17:09:53 [TUniServerModule]:Start Path = D:\DEV\kredensial\kredensial\Win64\Debug\
+kredensial.exe: 0000113C: 17:09:53 [TUniServerModule]:Debug Mode = ON
+kredensial.exe: 0000113C: 17:09:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+kredensial.exe: 0000113C: 17:09:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+kredensial.exe: 000023E8: 17:10:02 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: LRzYcF62bM10AB2E7C3 ) : Addr: $00000000009C855E
+kredensial.exe: 000031D4: 17:11:24 []:>--------------------------------------------------------------<
+kredensial.exe: 000031D4: 17:11:24 [TUniServerModule]:Server First Init.
+kredensial.exe: 000031D4: 17:11:24 [TUniServerModule]:Start Path = D:\DEV\kredensial\kredensial\Win64\Debug\
+kredensial.exe: 000031D4: 17:11:24 [TUniServerModule]:Debug Mode = ON
+kredensial.exe: 000031D4: 17:11:24 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+kredensial.exe: 000031D4: 17:11:25 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+kredensial.exe: 000031D4: 17:11:25 [TUniServerModule]:HTTP Server Started on Port: 8077
+kredensial.exe: 00003300: 17:11:25 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 9rJIeRMXGr10AB3046A ) : Addr: $00000000009C855E
