@@ -16,8 +16,6 @@ object frUserProfile: TfrUserProfile
     ParentColor = False
     Align = alLeft
     TabOrder = 0
-    ExplicitTop = 447
-    ExplicitHeight = 172
     object imUser: TUniImage
       Left = 8
       Top = 3
@@ -421,9 +419,6 @@ object frUserProfile: TfrUserProfile
     ParentColor = False
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 0
-    ExplicitWidth = 825
-    ExplicitHeight = 337
     object pcProfil: TUniPageControl
       Left = 0
       Top = 0
@@ -433,15 +428,9 @@ object frUserProfile: TfrUserProfile
       ActivePage = tsData
       Align = alClient
       TabOrder = 1
-      ExplicitLeft = 3
-      ExplicitTop = 48
-      ExplicitWidth = 663
-      ExplicitHeight = 480
       object tsData: TUniTabSheet
         Hint = ''
         Caption = 'Data profil'
-        ExplicitWidth = 655
-        ExplicitHeight = 163
         object pnlData: TUniContainerPanel
           Left = 0
           Top = 0
@@ -451,8 +440,6 @@ object frUserProfile: TfrUserProfile
           ParentColor = False
           Align = alTop
           TabOrder = 0
-          ExplicitTop = 8
-          ExplicitWidth = 655
           object edEmail: TUniEdit
             Left = 24
             Top = 16
@@ -476,27 +463,27 @@ object frUserProfile: TfrUserProfile
             FieldLabel = 'Nama Lengkap'
             FieldLabelWidth = 130
           end
-          object UniEdit3: TUniEdit
+          object edNipNps: TUniEdit
             Left = 24
             Top = 72
             Width = 449
             Hint = ''
-            Text = 'UniEdit1'
+            Text = ''
             TabOrder = 3
             FieldLabel = 'NIP/NPS'
             FieldLabelWidth = 130
           end
-          object UniEdit4: TUniEdit
+          object edTmptLahir: TUniEdit
             Left = 24
             Top = 100
             Width = 329
             Hint = ''
-            Text = 'UniEdit1'
+            Text = ''
             TabOrder = 4
             FieldLabel = 'Tempat / Tanggal Lahir'
             FieldLabelWidth = 130
           end
-          object UniDateTimePicker1: TUniDateTimePicker
+          object dtpTglLahir: TUniDateTimePicker
             Left = 368
             Top = 100
             Width = 105
@@ -506,54 +493,52 @@ object frUserProfile: TfrUserProfile
             TimeFormat = 'HH:mm:ss'
             TabOrder = 5
           end
-          object UniMemo1: TUniMemo
+          object mmAlamat: TUniMemo
             Left = 24
             Top = 128
             Width = 449
             Height = 89
             Hint = ''
-            Lines.Strings = (
-              'UniMemo1')
             TabOrder = 6
             FieldLabel = 'Alamat'
             FieldLabelWidth = 130
           end
-          object UniEdit5: TUniEdit
+          object edPhone: TUniEdit
             Left = 24
             Top = 223
             Width = 449
             Hint = ''
-            Text = 'UniEdit1'
+            Text = ''
             TabOrder = 7
             FieldLabel = 'Telepon/HP'
             FieldLabelWidth = 130
           end
-          object UniEdit6: TUniEdit
+          object edIjasah: TUniEdit
             Left = 24
             Top = 251
             Width = 449
             Hint = ''
-            Text = 'UniEdit1'
+            Text = ''
             TabOrder = 8
             FieldLabel = 'No. Ijasah'
             FieldLabelWidth = 130
           end
-          object UniEdit7: TUniEdit
+          object edNoStr: TUniEdit
             Left = 24
             Top = 279
             Width = 449
             Hint = ''
-            Text = 'UniEdit1'
+            Text = ''
             TabOrder = 9
             FieldLabel = 'No. STR'
             FieldLabelWidth = 130
           end
-          object UniEdit8: TUniEdit
+          object edNoSIP: TUniEdit
             Left = 24
             Top = 307
             Width = 449
             Hint = ''
-            Text = 'UniEdit1'
+            Text = ''
             TabOrder = 10
             FieldLabel = 'No. SIP'
             FieldLabelWidth = 130
@@ -581,10 +566,6 @@ object frUserProfile: TfrUserProfile
       object tsAuditlog: TUniTabSheet
         Hint = ''
         Caption = 'Histori log'
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 669
-        ExplicitHeight = 613
       end
     end
   end
@@ -650,7 +631,10 @@ object frUserProfile: TfrUserProfile
     Connection = UniServerModule.FDConnection1
     SQL.Strings = (
       'select users.id,users.email,users.full_name,'
-      'user_profiles.name user_profile'
+      'user_profiles.name user_profile,'
+      
+        'nip_nps,place_of_birth,date_of_birth,address,phone,no_ijasah,no_' +
+        'str,no_sip,tgl_mulai_kerja'
       'from'
       'users'
       

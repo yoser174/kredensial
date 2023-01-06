@@ -26,14 +26,14 @@ type
     pnlData: TUniContainerPanel;
     edEmail: TUniEdit;
     edFullName: TUniEdit;
-    UniEdit3: TUniEdit;
-    UniEdit4: TUniEdit;
-    UniDateTimePicker1: TUniDateTimePicker;
-    UniMemo1: TUniMemo;
-    UniEdit5: TUniEdit;
-    UniEdit6: TUniEdit;
-    UniEdit7: TUniEdit;
-    UniEdit8: TUniEdit;
+    edNipNps: TUniEdit;
+    edTmptLahir: TUniEdit;
+    dtpTglLahir: TUniDateTimePicker;
+    mmAlamat: TUniMemo;
+    edPhone: TUniEdit;
+    edIjasah: TUniEdit;
+    edNoStr: TUniEdit;
+    edNoSIP: TUniEdit;
     UniButton2: TUniButton;
     UniContainerPanel2: TUniContainerPanel;
     tsAuditlog: TUniTabSheet;
@@ -112,6 +112,14 @@ begin
   edEmail.Text := QDataProfil.FieldByName('email').AsString;
   edFullName.Text := QDataProfil.FieldByName('full_name').AsString;
   pnlUserProfile.Caption := QDataProfil.FieldByName('user_profile').AsString;
+  edNipNps.Text := QDataProfil.FieldByName('nip_nps').AsString;
+  edTmptLahir.Text := QDataProfil.FieldByName('place_of_birth').AsString;
+  dtpTglLahir.DateTime := QDataProfil.FieldByName('date_of_birth').AsDateTime;
+  mmAlamat.Lines.Text := QDataProfil.FieldByName('address').AsString;
+  edPhone.Text := QDataProfil.FieldByName('phone').AsString;
+  edIjasah.Text := QDataProfil.FieldByName('no_ijasah').AsString;
+  edNoStr.Text := QDataProfil.FieldByName('no_str').AsString;
+  edNoSIP.Text := QDataProfil.FieldByName('no_sip').AsString;
 
   pcProfil.ActivePage := tsData;
 

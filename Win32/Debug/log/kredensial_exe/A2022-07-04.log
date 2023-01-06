@@ -108,3 +108,4 @@ kredensial.exe: 00000CA4: 00:41:43 [TUniGUISessionManager]:Cache erase job creat
 kredensial.exe: 00000CA4: 00:41:43 [TUniServerModule]:Starting HTTP Server on Port: 8077...
 kredensial.exe: 00000CA4: 00:41:43 [TUniServerModule]:HTTP Server Started on Port: 8077
 kredensial.exe: 00000670: 00:41:44 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: cbOYPZf8pM10AB5048A ) : Addr: $007D909E
+kredensial.exe: 00000CA4: 01:02:58 [Exit]:Unexpected attempt to terminate server application with Exit Code: 0
